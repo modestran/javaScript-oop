@@ -7,8 +7,9 @@ Output: true
 Explanation: 121 reads as 121 from left to right and from right to left.
 
 */
-var isPalindrome = function (x) {
-  if (x < 0) return false;
+
+/*    
+    if (x < 0) return false;
 
   let item = x.toString().split("");
 
@@ -17,6 +18,10 @@ var isPalindrome = function (x) {
   }
 
   return true;
+*/
+
+var isPalindrome = function (x) {
+  return x < 0 ? false : x === +x.toString().split("").reverse().join("");
 };
 
 console.log(isPalindrome(121));
